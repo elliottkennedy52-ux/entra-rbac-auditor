@@ -1,0 +1,42 @@
+{
+  "tenant_name": "Contoso Enterprise Lab",
+  "generated_at": "2026-11-23T20:00:00Z",
+  "conditional_access_policies": [
+    {"name": "CA01-Require-MFA-Admins", "state": "enabled"},
+    {"name": "CA02-Block-Legacy-Auth", "state": "enabledForReportingButNotEnforced"}
+  ],
+  "users": [
+    {
+      "upn": "alex.admin@contoso.com",
+      "user_type": "Member",
+      "account_enabled": true,
+      "mfa_registered": true,
+      "days_since_last_signin": 2,
+      "roles": ["Global Administrator"]
+    },
+    {
+      "upn": "breakglass.admin@contoso.com",
+      "user_type": "Member",
+      "account_enabled": true,
+      "mfa_registered": false,
+      "days_since_last_signin": 120,
+      "roles": ["Global Administrator"]
+    },
+    {
+      "upn": "vendor.contractor_ext#EXT#@contoso.onmicrosoft.com",
+      "user_type": "Guest",
+      "account_enabled": true,
+      "mfa_registered": false,
+      "days_since_last_signin": 95,
+      "roles": ["Contributor"]
+    },
+    {
+      "upn": "sarah.analyst@contoso.com",
+      "user_type": "Member",
+      "account_enabled": true,
+      "mfa_registered": true,
+      "days_since_last_signin": 1,
+      "roles": ["Security Reader"]
+    }
+  ]
+}
