@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+
 from entra_auditor import audit_iam_snapshot
 
 
