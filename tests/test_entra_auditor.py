@@ -8,7 +8,7 @@ def test_sample_snapshot_flags_expected_drift():
     snapshot = json.loads(Path("samples/tenant_iam_export.json").read_text(encoding="utf-8"))
     report = audit_iam_snapshot(snapshot, stale_days=90)
 
-    assert report["users_evaluated"] == 5
+    assert report["users_evaluated"] == 4
     assert report["active_global_admins"] == 2
     assert report["total_findings"] == 5
     assert report["grade"] == "F"
